@@ -1,0 +1,189 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #ffd6e0 0%, #c1e1ff 100%);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  overflow: hidden;
+  padding: 24px;
+}
+
+.hero {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.hero-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f48fb1;
+}
+
+.timeline {
+  margin: 32px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline h2 {
+  text-align: center;
+}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.timeline li {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border-left: 3px solid #90caf9;
+}
+
+.timeline .date {
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.gallery {
+  margin: 32px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery h2 {
+  text-align: center;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.video-card {
+  width: 220px;
+  min-width: 180px;
+  background: #fff;
+  border: 2px solid #f48fb1;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 12px 16px 12px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  height: 320px;
+}
+
+.video-card video {
+  width: 180px;
+  height: 220px;
+  border-radius: 10px;
+  background: #fce4ec;
+  border: 1px solid #f48fb1;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.video-card:nth-child(5) video {
+  width: 210px;
+  height: 130px;
+}
+
+.video-label {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.08em;
+  color: #d81b60;
+  text-align: center;
+  font-weight: 500;
+  width: 100%;
+  line-height: 1.18;
+  word-break: break-word;
+  white-space: normal;
+  hyphens: auto;
+}
+
+/* Frases Bonitas */
+.phrases {
+  margin: 32px 0;
+  text-align: center;
+}
+
+#carousel {
+  position: relative;
+  height: 60px;
+  margin-top: 16px;
+}
+
+.phrase {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.6s;
+  font-size: 1.25em;
+  background: #fce4ec;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.special {
+  margin: 32px 0;
+  text-align: center;
+  font-size: 1.1em;
+  background: #e3f2fd;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  .container {
+    padding: 6px;
+  }
+  .gallery, .photos, .timeline ul {
+    max-width: 98vw;
+    width: 100%;
+  }
+  .video-card {
+    width: 98vw;
+    min-width: 0;
+    height: auto;
+    padding: 8px;
+  }
+  .video-card video {
+    width: 90vw;
+    max-width: 100%;
+    height: 180px;
+  }
+}
+
+/* Video: fullscreen fix para mantener relación de aspecto */
+video {
+  object-fit: contain !important;
+  background-color: #000 !important;
+}
